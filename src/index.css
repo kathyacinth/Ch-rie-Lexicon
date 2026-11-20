@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-blush-canvas: #fff7fa;
+  --color-blush-paper: #fdeef4;
+  --color-blush-silk: #fbdce8;
+  --color-petal-border: #f1c6d6;
+  --color-petal-strong: #e5a9c0;
+  --color-ink-plum: #361c26;
+  --color-ink-taupe: #72505d;
+  --color-ink-muted: #987382;
+  --color-ribbon-rose: #d85a8a;
+  --color-berry-deep: #b33b68;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-blush-canvas);
+    color: var(--color-ink-plum);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-blush-canvas);
+    background-image:
+      radial-gradient(at 14% 6%, rgba(251, 214, 229, 0.48) 0px, transparent 42%),
+      radial-gradient(at 88% 12%, rgba(253, 228, 238, 0.55) 0px, transparent 40%);
+    color: var(--color-ink-plum);
+  }
+
+  ::selection {
+    background-color: #f9cfe0;
+    color: #361c26;
+  }
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+.lace-scallop-top {
+  background-image: radial-gradient(circle at 10px 0px, transparent 6px, #fff7fa 6.5px);
+  background-size: 20px 10px;
+  background-repeat: repeat-x;
+}
+
+.lace-divider-dots {
+  background-image: radial-gradient(circle, #e5a9c0 1.25px, transparent 1.25px);
+  background-size: 12px 4px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.proof-spelling {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #c9345a;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  background-color: rgba(201, 52, 90, 0.08);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+.proof-grammar {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: #9e3f7a;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  background-color: rgba(158, 63, 122, 0.08);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+.proof-vocabulary {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #d85a8a;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  background-color: rgba(216, 90, 138, 0.09);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

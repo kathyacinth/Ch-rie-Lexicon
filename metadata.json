@@ -1,0 +1,6 @@
+{
+  "name": "Chérie Lexicon",
+  "description": "A coquette baby-pink dictionary, grammar and spelling checker, and real-time vocabulary writing atelier.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
